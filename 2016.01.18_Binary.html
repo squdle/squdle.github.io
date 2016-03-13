@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1">
+    <meta name="description" content="Joshua Deakin | Blog">
+    <title> Joshua Deakin | Blog </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <a href="./index.html" id="logo-link">
+        <img src="resource/logo.png" alt="Joshua Deakin" height="auto", width="200px">
+      </a>
+      <nav>
+        <ul>
+            <li><a class="link" href="./index.html">showreel</a></li>
+            <li><a class="link" href="./hypercube.html">hypercube</a></li>
+            <li><a class="link" href="./projects.html">projects</a></li>
+            <li><a class="current_link" href="./blog_1.html">blog</a></li>
+            <li><a class="link" href="./about.html">about</a></li>
+            <li><a class="link" href="./contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+<div id="background-4">
+    <div id="main">
+
+<article> <h1>
+Binary is pretty.
+</h1>
+<h2>
+2016.01.18
+</h2>
+<h3>
+What does counting sound like?
+</h3>
+
+<iframe width="100%" height="auto" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/242649287&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+<p>
+Binary has a cool pattern when we count upwards in positive integers from zero.
+</p>
+
+<p>
+You can listen to this pattern in the audio clip above.
+</p>
+
+<figure class="code"><pre><code>
+Counting upwards in binary numbers (Positive Integer from zero). 
+----->
+0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1
+0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1
+0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1
+0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+Binary numbers repeating pattern:
+
+0 1 ---repeats-->
+0 0 1 1 ---repeats-->
+0 0 0 0 1 1 1 1 ---repeats-->
+0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 ---repeats-->
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ---repeats-->
+
+With 0's removed:
+
+  1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+    1 1     1 1     1 1     1 1     1 1     1 1     1 1     1 1
+        1 1 1 1         1 1 1 1         1 1 1 1          1 1 1 1
+                1 1 1 1 1 1 1 1                 1 1 1 1 1 1 1 1
+                                1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+</code></pre></figure>
+
+<p>
+The first digit will always repeat: 0, 1, 0, 1, 0, 1, etc.
+The second digit will have the same pattern, 
+but with two zeros in place of each zero, 
+and two ones in place of each one: 
+0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1 ... and so on.
+</p>
+
+<p>
+The nth digit will have twice as many zeros in place of each zero of the (n - 1)th digit,
+as well as twice as many ones in place of each one of the (n - 1)th digit.
+</p>
+
+
+
+
+
+
+
+
+
+
+                                
+ 
+<a class="blog-button" href="2015.10.28_HypercubeAnimation.html">previous</a> 
+<a class="blog-button" href="2016.01.20_bmp2fps.html">next</a> </article>
+    </div>
+<div>
+    <footer>
+      <ul>
+          <li><a href="http://www.vimeo.com/joshdeakin">vimeo</a></li>
+          <li><a href="http://uk.linkedin.com/in/joshuadeakin">linkedin</a></li>
+          <li><a href="https://github.com/squdle/">github</a></li>
+      </ul>
+    </footer>
+  </body>   
+ 
+
+</html>
