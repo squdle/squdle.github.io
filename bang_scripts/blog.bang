@@ -1,0 +1,38 @@
+!page_name !!site_name!! | Blog
+!title Blog
+
+!link_1_class link
+!link_2_class link
+!link_3_class link
+!link_4_class current_link
+!link_5_class link
+
+!background background-4
+
+Blog Navigation
+!hero
+!!content html/blog.html
+!!!! html/base.html tmp/blog_wrapper.html
+!!< html/left.html
+!!> html/right.html
+!<> !!!!! !!<!! !!>!!
+VVV The slash reverses the order! VVV
+!!!!/ posts/*.html tmp/blog/blog.html html/blog_preview.html 100
+!<
+!>
+!!!!! tmp/blog_wrapper.html tmp/blog/*.html
+!!!! tmp/blog/*.html *.html
+
+Blog posts
+!hero
+!content <article> !!!!! </article>
+
+!!!! html/base.html tmp/post_wrapper.html
+!!< html/left.html
+!!> html/right.html
+!<> !!!!! !!<!! !!>!!
+!!!! posts/*.html tmp/blog/posts/*.html
+!<
+!>
+!!!!! tmp/post_wrapper.html tmp/blog/posts/*.html
+!!!! tmp/blog/posts/*.html *.html

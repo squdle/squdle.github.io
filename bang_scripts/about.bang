@@ -1,0 +1,12 @@
+!page_name !!site_name!!  | About
+
+!link_5_class current_link
+
+!!main html/main_transparent.html
+!background background-2
+
+!title  > whoami ? 
+!pdf !!resource!!cv.pdf
+!text <a href="!!pdf!!" class="link">PDF download</a>
+!extra <img src="!!resource!!cv.png" alt="Curriculum Vitae" width="500px" height="auto" id="cv">
+!!!! html/base.html about.html

@@ -1,0 +1,12 @@
+!page_name !!site_name!! | Projects
+!title Projects (links to external websites)
+
+!link_3_class current_link
+
+!background background-3
+
+!hero
+!!content html/blog.html
+!!!! html/base.html tmp/projects_wrapper.html
+!!!! projects/*.html projects.html html/projects_preview.html
+!!!!! tmp/projects_wrapper.html projects.html

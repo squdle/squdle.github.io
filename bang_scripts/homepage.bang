@@ -1,0 +1,18 @@
+!link_1_class current_link  
+
+!!main html/main_transparent.html
+!background background-1
+
+!hero !!video!!
+!!video html/video.html
+!video-download
+!video_file /video
+!!video html/video_embed.html
+!video-embed <iframe src="https://player.vimeo.com/video/158737376" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p><a href="https://vimeo.com/158737376">Joshua Deakin Showreel</a> from <a href="https://vimeo.com/joshdeakin">JD</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+!extra !!clear!!
+
+!title  Geometry, patterns, abstraction and code.
+!text 
+
+!!!! html/base.html index.html

@@ -1,0 +1,19 @@
+!page_name !!site_name!! | Contact
+
+!link_6_class current_link
+
+!background background-5
+
+!hero
+!!content html/contact.html
+!title Send a message
+!email contact@joshuadeakin.com
+!!message txt/contact.txt
+!text <p> !!message!! </p> <p>  Alternatively you can email me at:
+!!contact_form html/contact_form.html
+!!!! html/base.html contact.html
+
+!!content html/content.html
+!title Message sent!
+!!text txt/contacted.txt
+!!!! html/base.html contacted.html

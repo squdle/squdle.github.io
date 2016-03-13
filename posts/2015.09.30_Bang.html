@@ -1,0 +1,59 @@
+<h1>
+!!Bang!!
+</h1>
+<h2>
+2015.09.29
+</h2>
+<h3>
+So... I decided it would be fun to design my own static website generator.
+</h3>
+<img src="!!resource!!bang.png" alt="preview_image">
+<p>
+So, I decided it would be fun to design my own static 
+website generator to help build my own site.
+This involved designing a markup language and interpreted scripting language.
+The generator is called !!Bang!! because you use two bangs (exclamation marks, !!)
+prefix and postfix around keywords in text files.
+These keywords are then replaced with specific values later.
+</p>
+<p>
+Keyword values can be a word, a line of text, a file of text or even the output of a python script.
+This allows to change content easily as well as make HTML and CSS code very modular.
+Here is an example html template that could be reused with every page of a website:
+</p>
+
+<figure class="code"><pre><code>example.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+!! head !!
+!! header !!
+!! main !!
+!! footer !!
+&lt;&frasl;html&gt;
+</code></pre></figure>
+
+<p>
+The keywords can be nested, so this can be simplified further to:
+</p>
+
+<figure class="code"><pre><code>simple_example.html
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+!! head !!
+!! body !!
+&lt;&frasl;html&gt;
+</code></pre></figure>
+
+
+<p>
+This is what I use to to generate this website.
+</p>
+<p>
+Bang scripts are used to determine the values of keywords, 
+how files should be processed, and when to process them.
+If you're interested in reading more about this you can check out 
+<a href="https://github.com/squdle/Bang">!!Bang!! on Github</a>,
+linked through my projects page. Who knows, you might actually have a use for it!
+</p>

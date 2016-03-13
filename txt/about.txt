@@ -1,0 +1,13 @@
+<p>
+I am a recent Bournemouth University graduate having finished my studies in Computer Visualisation and Animation BA (Hons). 
+</p>
+<p>
+At University I learned to combine creative and technical skills, creating computer graphics through programming and mathematics. Also developing a good generalist foundation in the wider CG pipeline with industry standard software.
+</p>
+<p>
+I'm fascinated with using code to draw and am interested in exploring generative art, data representation, geometry and pattern. In particular my inspirations include abstraction in art and animation (Norman McLaren, Len Lye, Oskar Fishenger, M C Escher, Kandinsky, Miro, Klee, Art Deco).
+</p>
+<p>
+I am proficient in:
+C#, Python, C++, Maya, Maya Python, Blender, Illustration, Photoshop, Git + Github, Mathematics, html+css
+</p>

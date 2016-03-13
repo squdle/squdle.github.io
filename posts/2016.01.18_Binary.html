@@ -1,0 +1,69 @@
+<h1>
+Binary is pretty.
+</h1>
+<h2>
+2016.01.18
+</h2>
+<h3>
+What does counting sound like?
+</h3>
+
+<iframe width="100%" height="auto" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/242649287&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+<p>
+Binary has a cool pattern when we count upwards in positive integers from zero.
+</p>
+
+<p>
+You can listen to this pattern in the audio clip above.
+</p>
+
+<figure class="code"><pre><code>
+Counting upwards in binary numbers (Positive Integer from zero). 
+----->
+0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1
+0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1
+0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1
+0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+Binary numbers repeating pattern:
+
+0 1 ---repeats-->
+0 0 1 1 ---repeats-->
+0 0 0 0 1 1 1 1 ---repeats-->
+0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 ---repeats-->
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ---repeats-->
+
+With 0's removed:
+
+  1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+    1 1     1 1     1 1     1 1     1 1     1 1     1 1     1 1
+        1 1 1 1         1 1 1 1         1 1 1 1          1 1 1 1
+                1 1 1 1 1 1 1 1                 1 1 1 1 1 1 1 1
+                                1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+</code></pre></figure>
+
+<p>
+The first digit will always repeat: 0, 1, 0, 1, 0, 1, etc.
+The second digit will have the same pattern, 
+but with two zeros in place of each zero, 
+and two ones in place of each one: 
+0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1 ... and so on.
+</p>
+
+<p>
+The nth digit will have twice as many zeros in place of each zero of the (n - 1)th digit,
+as well as twice as many ones in place of each one of the (n - 1)th digit.
+</p>
+
+
+
+
+
+
+
+
+
+
+                                

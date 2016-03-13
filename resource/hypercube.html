@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Hypercube </title>
+    <style>
+
+/* Keyframes */
+@-webkit-keyframes d1 { 0% {padding-right:0em; background-color: #ffffff;} 25% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+   @-moz-keyframes d1 { 0% {padding-right:0em; background-color: #ffffff;} 25% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+     @-o-keyframes d1 { 0% {padding-right:0em; background-color: #ffffff;} 25% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+        @keyframes d1 { 0% {padding-right:0em; background-color: #ffffff;} 25% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+
+@-webkit-keyframes d2 { 0% {padding-right:0em; background-color: #ffffff;} 25% {padding-right:0em; background-color: #ffffff;} 50% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+   @-moz-keyframes d2 { 0% {padding-right:0em; background-color: #ffffff;} 25% {padding-right:0em; background-color: #ffffff;} 50% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+     @-o-keyframes d2 { 0% {padding-right:0em; background-color: #ffffff;} 25% {padding-right:0em; background-color: #ffffff;} 50% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+        @keyframes d2 { 0% {padding-right:0em; background-color: #ffffff;} 25% {padding-right:0em; background-color: #ffffff;} 50% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+
+@-webkit-keyframes d3 { 0% {padding-right:0em; background-color: #ffffff;} 50% {padding-right:0em; background-color: #ffffff;} 75% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+   @-moz-keyframes d3 { 0% {padding-right:0em; background-color: #ffffff;} 50% {padding-right:0em; background-color: #ffffff;} 75% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+     @-o-keyframes d3 { 0% {padding-right:0em; background-color: #ffffff;} 50% {padding-right:0em; background-color: #ffffff;} 75% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+        @keyframes d3 { 0% {padding-right:0em; background-color: #ffffff;} 50% {padding-right:0em; background-color: #ffffff;} 75% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+
+@-webkit-keyframes d4 { 0% {padding-right:0em; background-color: #ffffff;} 75% {padding-right:0em; background-color: #ffffff;} 100% { padding-right:25%; background-color: #333333;}}
+   @-moz-keyframes d4 { 0% {padding-right:0em; background-color: #ffffff;} 75% {padding-right:0em; background-color: #ffffff;} 100% { padding-right:25%; background-color: #333333;}}
+     @-o-keyframes d4 { 0% {padding-right:0em; background-color: #ffffff;} 75% {padding-right:0em; background-color: #ffffff;} 100% { padding-right:25%; background-color: #333333;}}
+        @keyframes d4 { 0% {padding-right:0em; background-color: #ffffff;} 75% {padding-right:0em; background-color: #ffffff;} 100% { padding-right:25%; background-color: #333333;}}
+
+@-webkit-keyframes d4 { 0% {padding-right:0em; background-color: #ffffff;} 75% {padding-right:0em; background-color: #ffffff;} 90% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+   @-moz-keyframes d4 { 0% {padding-right:0em; background-color: #ffffff;} 75% {padding-right:0em; background-color: #ffffff;} 90% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+     @-o-keyframes d4 { 0% {padding-right:0em; background-color: #ffffff;} 75% {padding-right:0em; background-color: #ffffff;} 90% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+        @keyframes d4 { 0% {padding-right:0em; background-color: #ffffff;} 75% {padding-right:0em; background-color: #ffffff;} 90% { padding-right:25%; background-color: #333333;} 100% { padding-right:25%; background-color: #333333;}}
+
+@-webkit-keyframes d4-connect { 0% {padding-right:0em; background-color: #ffffff;} 75% {padding-right:0em; background-color: #ffffff;} 90% { padding-right: 71.46%; background-color: #333333;} 100% { padding-right: 71.46%; background-color: #333333;}}
+   @-moz-keyframes d4-connect { 0% {padding-right:0em; background-color: #ffffff;} 75% {padding-right:0em; background-color: #ffffff;} 90% { padding-right: 71.46%; background-color: #333333;} 100% { padding-right: 71.46%; background-color: #333333;}}
+     @-o-keyframes d4-connect { 0% {padding-right:0em; background-color: #ffffff;} 75% {padding-right:0em; background-color: #ffffff;} 90% { padding-right: 71.46%; background-color: #333333;} 100% { padding-right: 71.46%; background-color: #333333;}}
+        @keyframes d4-connect { 0% {padding-right:0em; background-color: #ffffff;} 75% {padding-right:0em; background-color: #ffffff;} 90% { padding-right: 71.46%; background-color: #333333;} 100% { padding-right: 71.46%; background-color: #333333;}}
+
+/* Animation */
+#line1
+{
+  -webkit-animation: d1 5s ease-in-out 0s infinite alternate; /* Safari 4+ */
+  -moz-animation:    d1 5s ease-in-out 0s infinite alternate; /* Fx 5+ */
+  -o-animation:      d1 5s ease-in-out 0s infinite alternate; /* Opera 12+ */
+  animation:         d1 5s ease-in-out 0s infinite alternate; /* IE 10+, Fx 29+ */
+}
+
+#line2, #line3, #line4
+{
+  -webkit-animation: d2 5s ease-in-out 0s infinite alternate; /* Safari 4+ */
+  -moz-animation:    d2 5s ease-in-out 0s infinite alternate; /* Fx 5+ */
+  -o-animation:      d2 5s ease-in-out 0s infinite alternate; /* Opera 12+ */
+  animation:         d2 5s ease-in-out 0s infinite alternate; /* IE 10+, Fx 29+ */
+}
+
+#line5, #line6, #line7, #line8, #line9, #line10, #line11, #line12
+{
+  -webkit-animation: d3 5s ease-in-out 0s infinite alternate; /* Safari 4+ */
+  -moz-animation:    d3 5s ease-in-out 0s infinite alternate; /* Fx 5+ */
+  -o-animation:      d3 5s ease-in-out 0s infinite alternate; /* Opera 12+ */
+  animation:         d3 5s ease-in-out 0s infinite alternate; /* IE 10+, Fx 29+ */
+}
+
+#line13, #line14, #line15, #line16, #line17, #line18, #line19, #line20, #line21, #line22, #line23, #line24
+{
+  -webkit-animation: d4 5s ease-in-out 0s infinite alternate; /* Safari 4+ */
+  -moz-animation:    d4 5s ease-in-out 0s infinite alternate; /* Fx 5+ */
+  -o-animation:      d4 5s ease-in-out 0s infinite alternate; /* Opera 12+ */
+  animation:         d4 5s ease-in-out 0s infinite alternate; /* IE 10+, Fx 29+ */
+}
+
+#line25, #line26, #line27, #line28, #line29, #line30, #line31, #line32
+{
+  -webkit-animation: d4-connect 5s ease-in-out 0s infinite alternate; /* Safari 4+ */
+  -moz-animation:    d4-connect 5s ease-in-out 0s infinite alternate; /* Fx 5+ */
+  -o-animation:      d4-connect 5s ease-in-out 0s infinite alternate; /* Opera 12+ */
+  animation:         d4-connect 5s ease-in-out 0s infinite alternate; /* IE 10+, Fx 29+ */
+}
+
+body
+{
+  background-color: #EEEEEE;
+}
+
+/* div shapes */
+#div-canvas
+{
+  width: 20em;
+  height: 20em;
+  padding: 0;
+  margin: 1em;
+  position: relative;
+}
+
+#line1, #line2, #line3, #line4, #line5, #line6, #line7, #line8, #line9, #line10, #line11, #line12, #line13, #line14, #line15, #line16, #line17, #line18, #line19, #line20, #line21, #line22, #line23, #line24, #line25, #line26, #line27, #line28, #line29, #line30, #line31, #line32
+{
+  position: absolute;
+  margin: 0;
+  width: 0;
+  height: .5em;
+  padding-right: 25%;
+  background-color: #EEEEEE;
+}
+
+#line1
+{
+  left: 0;
+  top: 25%;
+}
+
+#line2
+{
+  left: 0;
+  top:  25%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+#line3
+{
+  left: 25%;
+  top:  25%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+#line4
+{
+  left: 0%;
+  top:  50%;
+}
+
+#line5
+{
+  left: 0em;
+  top:  25%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+#line6
+{
+  left: 25%;
+  top:  25%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+#line7
+{
+  left: 0;
+  top:  50%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+#line8
+{
+  left: 25%;
+  top:  50%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+#line9
+{
+  left: 17.67766952966369%;
+  top: 7.32233047033631%;
+}
+
+#line10
+{
+  left: 17.67766952966369%;
+  top: 7.32233047033631%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+#line11
+{
+  left: 42.67766952966369%;
+  top: 7.32233047033631%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+#line12
+{
+  left: 17.67766952966369%;
+  top: 32.32233047033631%;
+}
+
+#line13
+{
+  left: 57.32233047033631%;
+  top: 67.67766952966369%;
+}
+
+#line14
+{
+  left: 57.32233047033631%;
+  top:  67.67766952966369%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+#line15
+{
+  left: 82.32233047033631%;
+  top:  67.67766952966369%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+#line16
+{
+  left: 57.32233047033631%;
+  top:  92.67766952966369%;
+}
+
+#line17
+{
+  left: 57.32233047033631%;
+  top:  67.67766952966369%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+#line18
+{
+  left: 82.32233047033631%;
+  top:  67.67766952966369%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(-45deg); /* IE 9 */
+
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+#line19
+{
+  left: 57.32233047033631%;
+  top:  92.67766952966369%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+#line20
+{
+  left: 82.32233047033631%;
+  top:  92.67766952966369%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+#line21
+{
+  left: 75%;
+  top: 50%;
+}
+
+#line22
+{
+  left: 75%;
+  top: 50%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+#line23
+{
+  left: 100%;
+  top: 50%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+#line24
+{
+  left: 75%;
+  top: 75%;
+}
+
+#line25
+{
+  left: 0;
+  top: 50%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(36.66deg); /* IE 9 */
+  -webkit-transform: rotate(36.66deg); /* Chrome, Safari, Opera */
+  transform: rotate(36.66deg);
+}
+
+#line26
+{
+  left: 25%;
+  top: 50%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(36.66deg); /* IE 9 */
+  -webkit-transform: rotate(36.66deg); /* Chrome, Safari, Opera */
+  transform: rotate(36.66deg);
+}
+
+#line27
+{
+  left: 25%;
+  top: 25%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(36.66deg); /* IE 9 */
+  -webkit-transform: rotate(36.66deg); /* Chrome, Safari, Opera */
+  transform: rotate(36.66deg);
+}
+
+#line28
+{
+  left: 0;
+  top: 25%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(36.66deg); /* IE 9 */
+  -webkit-transform: rotate(36.66deg); /* Chrome, Safari, Opera */
+  transform: rotate(36.66deg);
+}
+
+#line29
+{
+  left: 17.67766952966369%;
+  top: 32.32233047033631%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(36.66deg); /* IE 9 */
+  -webkit-transform: rotate(36.66deg); /* Chrome, Safari, Opera */
+  transform: rotate(36.66deg);
+}
+
+#line30
+{
+  left: 42.67766952966369%;
+  top: 32.32233047033631%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(36.66deg); /* IE 9 */
+  -webkit-transform: rotate(36.66deg); /* Chrome, Safari, Opera */
+  transform: rotate(36.66deg);
+}
+
+
+#line31
+{
+  left: 17.67766952966369%;
+  top: 7.322330470336311%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(36.66deg); /* IE 9 */
+  -webkit-transform: rotate(36.66deg); /* Chrome, Safari, Opera */
+  transform: rotate(36.66deg);
+}
+
+#line32
+{
+  left: 42.67766952966369%;
+  top: 7.322330470336311%;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(36.66deg); /* IE 9 */
+  -webkit-transform: rotate(36.66deg); /* Chrome, Safari, Opera */
+  transform: rotate(36.66deg);
+}
+  </style>
+  </head>
+  <body>
+    <div id="div-canvas">
+      <div id="line1"></div>
+      <div id="line2"></div>
+      <div id="line3"></div>
+      <div id="line4"></div>
+      <div id="line5"></div>
+      <div id="line6"></div>
+      <div id="line7"></div>
+      <div id="line8"></div>
+      <div id="line9"></div>
+      <div id="line10"></div>
+      <div id="line11"></div>
+      <div id="line12"></div>
+      <div id="line13"></div>
+      <div id="line14"></div>
+      <div id="line15"></div>
+      <div id="line16"></div>
+      <div id="line17"></div>
+      <div id="line18"></div>
+      <div id="line19"></div>
+      <div id="line20"></div>
+      <div id="line21"></div>
+      <div id="line22"></div>
+      <div id="line23"></div>
+      <div id="line24"></div>
+      <div id="line25"></div>
+      <div id="line26"></div>
+      <div id="line27"></div>
+      <div id="line28"></div>
+      <div id="line29"></div>
+      <div id="line30"></div>
+      <div id="line31"></div>
+      <div id="line32"></div>
+    </div>
+  </body>
+</html>
+</html>

@@ -1,0 +1,67 @@
+FONTS
+!font-import Inconsolata
+!font-import-url ./font/!!font-import!!/!!font-import!!.otf
+!font-family !!font-import!!, Consolas, "Courier New", Courier, monospace
+!font-size 100%
+
+GENERAL COLORS
+!background-color #FFFFFF
+!second-background-color #FCB376
+!text-color #222222
+!text-invert #FFFFFF
+!border-color #888888
+!shadow #BBBBBB
+!link-color #FF4600
+!link-active-color #FF914F
+!selection-color !!text-invert!!
+!selection-background-color !!link-active-color!!
+
+BACKGROUND
+!page-background-color !!background-color!!
+!background-image-url !!resource!!bg.png
+!background-image  background-image: url("!!background-image-url!!");
+!background-image-1-url !!resource!!bg-1.png
+!background-image-1  background-image: url("!!background-image-1-url!!");
+!background-image-2-url !!resource!!bg-2.png
+!background-image-2  background-image: url("!!background-image-2-url!!");
+!background-image-3-url !!resource!!bg-3.png
+!background-image-3  background-image: url("!!background-image-3-url!!");
+!background-image-4-url !!resource!!bg-4.png
+!background-image-4  background-image: url("!!background-image-4-url!!");
+!background-image-5-url !!resource!!bg-5.png
+!background-image-5  background-image: url("!!background-image-5-url!!");
+!background-image-404-url  !!resource!!bg-404.png
+!background-image-404  background-image: url("!!background-image-404-url!!");
+
+
+SPECIFIC COLORS
+
+!highlight-background-color !!link-active-color!!
+!highlight-color !!background-color!!
+
+!header-background-color !!background-color!!
+!nav-background-color !!background-color!!
+!main-background-color !!background-color!!;
+!main-transparent-background-color background-color: rgba(255,255,255,0)
+!footer-background-color !!background-color!!
+
+!button-color !!text-color!!
+!button-background-color !!background-color!!
+!button-active-color !!text-invert!!
+!button-active-background-color !!link-active-color!!
+!button-underline-color !!link-active-color!!
+!button-border-color !!shadow!!
+!current-link-background-color !!main-background-color!!
+
+!article-background-color !!background-color!!
+!article-border-color !!border-color!!
+!article-active-background-color !!second-background-color!!
+
+!code-background-color !!second-background-color!!
+
+!footer-border-color !!border-color!!
+
+MINIFY CSS
+!!! python/minify.py css/style.css style.css
+PROCESS STYLE
+!!!! style.css style.css

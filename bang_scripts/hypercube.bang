@@ -1,0 +1,14 @@
+!page_name !!site_name!! | Hypercube
+
+!link_2_class current_link
+
+!!main html/main_transparent.html
+!background
+
+!!processing-demo hypercube/index.html
+!extra !!processing-demo!!
+
+!title  Hypercube Visualisation
+!text This is a 2D visualisation of an n-dimensional cube. Move the coloured circles to extrude and collapse dimensions of the hypercube. Right click to hide axes handles. This demo may not work on touchscreen devices. <a href="https://vimeo.com/138472296">You can also watch the demo as a video here</a>.
+
+!!!! html/base.html hypercube.html

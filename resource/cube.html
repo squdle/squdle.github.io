@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Cube </title>
+    <style>
+body
+{
+  background-color: #DDDDDD;
+}
+    
+@-webkit-keyframes draw { from {padding-right:0em; background-color: #ffffff;} to { padding-right:10em; background-color: #333333;}}
+@-moz-keyframes draw { from {padding-right:0em; background-color: #ffffff;} to { padding-right:10em; background-color: #333333;}}
+@-o-keyframes draw { from {padding-right:0em; background-color: #ffffff;} to { padding-right:10em; background-color: #333333;}}
+@keyframes draw { from {padding-right:0em; background-color: #ffffff;} to { padding-right:10em; background-color: #333333;}}
+
+#origin *
+{
+  -webkit-animation: draw 3s ease-in-out 0s infinite alternate; /* Safari 4+ */
+  -moz-animation:    draw 3s ease-in-out 0s infinite alternate; /* Fx 5+ */
+  -o-animation:      draw 3s ease-in-out 0s infinite alternate; /* Opera 12+ */
+  animation:         draw 3s ease-in-out 0s infinite alternate; /* IE 10+, Fx 29+ */
+ 
+  border-radius: 1em; 
+}
+
+#div-canvas
+{
+  width: 20em;
+  height: 20em;
+  padding: 0;
+  margin: 0;
+}
+
+#origin
+{
+  position: relative;
+  left: 5%;
+  top: 50%;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  height: 0;
+}
+
+#line1
+{
+  position: absolute;
+  left: 0em;
+  bottom:  0em;
+  margin: 0;
+  width: 0;
+  padding-right: 10%;
+  height: .5em;
+  background-color: #222222;
+}
+
+#line2
+{
+  position: absolute;
+  left: 0em;
+  bottom:  0em;
+  margin: 0;
+  width: 0;
+  padding-right: 10%;
+  height: .5em;
+  background-color: #222222;
+  
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+#line3
+{
+  position: absolute;
+  left: 10em;
+  bottom:  0em;
+  margin: 0;
+  width: 0;
+  padding-right: 10%;
+  height: .5em;
+  background-color: #222222;
+  
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+#line4
+{
+  position: absolute;
+  left: 0em;
+  bottom:  -10em;
+  margin: 0;
+  width: 0;
+  padding-right: 10%;
+  height: .5em;
+  background-color: #222222;
+}
+
+#line5
+{
+  position: absolute;
+  left: 0em;
+  bottom:  -10em;
+  margin: 0;
+  width: 0;
+  padding-right: 10%;
+  height: .5em;
+  background-color: #222222;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+#line6
+{
+  position: absolute;
+  left: 10em;
+  bottom:  -10em;
+  margin: 0;
+  width: 0;
+  padding-right: 10%;
+  height: .5em;
+  background-color: #222222;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+#line7
+{
+  position: absolute;
+  left: 10em;
+  bottom:  0em;
+  margin: 0;
+  width: 0;
+  padding-right: 10%;
+  height: .5em;
+  background-color: #222222;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+#line8
+{
+  position: absolute;
+  left: 0em;
+  bottom:  0em;
+  margin: 0;
+  width: 0;
+  padding-right: 10%;
+  height: .5em;
+  background-color: #222222;
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+  transform: rotate(-45deg);
+}
+
+#line9
+{
+  position: absolute;
+  left: 7.0710678118654755em;
+  bottom:  7.0710678118654755em;
+  margin: 0;
+  width: 0;
+  padding-right: 10%;
+  height: .5em;
+  background-color: #222222;
+}
+
+#line10
+{
+  position: absolute;
+  left: 7.0710678118654755em;
+  bottom:  7.0710678118654755em;
+  margin: 0;
+  width: 0;
+  padding-right: 10%;
+  height: .5em;
+  background-color: #222222;
+  
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+#line11
+{
+  position: absolute;
+  left: 17.0710678118654755em;
+  bottom:  7.0710678118654755em;
+  margin: 0;
+  width: 0;
+  padding-right: 10%;
+  height: .5em;
+  background-color: #222222;
+  
+  -ms-transform-origin: 0% 50%; /* IE 9 */
+  -webkit-transform-origin: 0% 50%; /* Chrome, Safari, Opera */
+  transform-origin: 0% 50%;   
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+}
+
+#line12
+{
+  position: absolute;
+  left: 7.0710678118654755em;
+  bottom:  -2.9289321881345245em;
+  margin: 0;
+  width: 0;
+  padding-right: 10%;
+  height: .5em;
+  background-color: #222222;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="div-canvas">
+      <div id="origin">
+        <div id="line1"></div>
+        <div id="line2"></div>
+        <div id="line3"></div>
+        <div id="line4"></div>
+        <div id="line5"></div>
+        <div id="line6"></div>
+        <div id="line7"></div>
+        <div id="line8"></div>
+        <div id="line9"></div>
+        <div id="line10"></div>
+        <div id="line11"></div>
+        <div id="line12"></div>
+      </div>
+    </div>
+  </body>
+</html>
+</html>

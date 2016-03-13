@@ -1,0 +1,80 @@
+<h1>
+Shape Functions and fish scales
+</h1>
+<h2>
+2016.03.12
+</h2>
+<h3>
+Drawing shapes with maths.
+</h3>
+<img src="https://s3.amazonaws.com/calc_thumbs/production/t8usv7snyo.png" width="200px" height="200px"     style="border:1px solid #ccc; border-radius:5px"  />
+<p>
+<a title="View with the Desmos Graphing Calculator" href="https://www.desmos.com/calculator/t8usv7snyo">View with the Desmos Graphing Calculator</a>
+<p>
+
+<p>
+In school we learn how to draw circles:
+</p>
+
+<figure class="code"><pre><code>x^2 + y^2 - r^2 = 0 
+where r is the circle radius
+</code></pre></figure>
+
+<p>
+What if we want to draw lots of circles though?
+We can use a modulus function in the x and y axes to repeat values within a bounding box.
+This is kind of like folding space to get an infinite number of circles!
+</p>
+
+<figure class="code"><pre><code>x_repeat = mod(x, width)
+y_repeat = mod(y, height)
+width = height = 2 * r
+</code></pre></figure>
+
+<p>
+We also need to translate the circle into the repeating bounding box:
+</p>
+
+<figure class="code"><pre><code>offset = -r
+</code></pre></figure>
+
+<p>
+Boolean operations can be used to combine different shape functions:
+</p>
+<figure class="code"><pre><code>union(f1, f2) = min(f1,f2)
+intersection(f1, f2) = max(f1,f2)
+difference(f1) = -(f1)
+</code></pre></figure>
+
+<p>
+Combining this all we can draw patterns!
+Here's a repeating fish scale pattern:
+</p>
+
+<figure class="code"><pre><code>circle_main = (x_repeat + offset)^2 + (y_repeat + offset)^2 - r)
+circle_left = (x_repeat)^2 + (y_repeat)^2 - r
+circle_right = (x_repeat + offset * 2)^2 + (y_repeat)^2 - r
+
+pattern = max( circle_main , - min ( circle_left , circle_right ) )
+</code></pre></figure>
+
+<p>
+<a href="https://www.desmos.com/calculator/whsgavsovb">See an interactive version on desmos, an amazing graph website!</a>
+</p>
+
+<p>
+In University my tutor introduced me to <a href="http://hyperfun.org/">Hyperfun and Frep</a>.
+Frep or function representation is the idea of drawing (multidimensional) shapes with mathematics and
+Hyperfun is a high level programming language that helps you do the draw these shapes.
+</p>
+
+
+
+
+
+
+
+
+
+
+                                

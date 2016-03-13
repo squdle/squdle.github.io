@@ -1,0 +1,8 @@
+<h1>
+8-bit Music
+</h1>
+<p>
+Some 8-bit music free to download.
+</p>
+<img src="!!resource!!music.png" alt="preview_image">
+https://soundcloud.com/17thcenturyrobot

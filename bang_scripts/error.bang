@@ -1,0 +1,17 @@
+!page_name Don't Panic
+!title !!page_name!!
+
+!link_1_class link
+!link_2_class link
+!link_3_class link
+!link_4_class link
+
+!background background-404
+
+!hero
+!!content html/content.html
+
+!title 404 Page not found!
+!!text txt/error.txt
+
+!!!! html/base.html 404.html

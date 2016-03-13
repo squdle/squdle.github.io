@@ -1,0 +1,57 @@
+Base html templates
+!!base html/base.html
+!!head html/head.html
+!!body html/body.html
+
+Site Stylesheet
+!stylesheet style.css
+
+Media files (jpg png pdf)
+!resource resource/
+
+Header
+!!header html/header.html
+!site_name Joshua Deakin
+!page_name !!site_name!! | Portfolio
+!tagline
+!logo_src !!resource!!logo.png
+!logo_alt !!site_name!!
+
+Navigation - current_link changes link style
+!!nav html/nav.html
+!link_1_name showreel
+!link_1 ./index.html
+!link_1_class link
+!link_2_name hypercube
+!link_2 ./hypercube.html
+!link_2_class link
+!link_3_name projects
+!link_3 ./projects.html
+!link_3_class link
+!link_4_name blog
+!link_4 ./blog_1.html
+!link_4_class link
+!link_5_name about
+!link_5 ./about.html
+!link_5_class link
+!link_6_name contact
+!link_6 ./contact.html
+!link_6_class link
+
+Main Default content
+!!main html/main.html
+!hero
+!!content html/content.html
+!extra
+!!clear html/clear.html
+!background background
+
+Footer
+!!footer html/footer.html
+#!footer
+!social_1 vimeo
+!social_1_link http://www.vimeo.com/joshdeakin
+!social_2 linkedin
+!social_2_link http://uk.linkedin.com/in/joshuadeakin
+!social_3 github
+!social_3_link https://github.com/squdle/

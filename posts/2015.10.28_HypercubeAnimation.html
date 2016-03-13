@@ -1,0 +1,41 @@
+<h1>
+Hypercube animation demo
+</h1>
+<h2>
+2015.10.28
+</h2>
+<h3>
+Experimental CSS animation.
+</h3>
+
+<p>
+Below is an experimental CSS animation.
+It might not display properly on all browsers or devices,
+but should work in modern browsers.
+</p>
+<div class="embed-square">
+  <iframe class="embed" src="!!resource!!hypercube.html" height="500px", width="500px">
+  Experimental CSS animation (not supported in all browsers).
+  </iframe>
+</div>
+<p>
+CSS animation is primarily used for simple transitions,
+but I wanted to see how it could be used to animate something more complex.
+Each line of the hypercube is a HTML div that has been translated and rotated in CSS. 
+All the translations and sizing are done by percentage in relation to a container div
+so that so that everything can be scaled to the parent container.
+The length of the lines is determined by the padding-right attribute,
+and the rotation pivot has been moved to the left to allow for this.
+Feel free to read the source code of <a href="!!resource!!hypercube.html">this page</a>.
+</p>
+<p>
+CSS animation can be used as an alternative to a GIF image, which could save bandwidth.
+However, even this relatively small demo uses 32 divs in the HTML not including the container div.
+Even something as small as this is pretty poor in terms of keeping html clean,
+which is very bad for accessibility. 
+If a person is visually impaired, they may be using a screen reader, 
+and messy html like this can present a problem for them.
+This is just a small experimental visual demo though, 
+and wouldn't (or at least shouldn't!) really be used elsewhere.
+</p>
+<div class="clear"></div>
