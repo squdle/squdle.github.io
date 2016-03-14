@@ -1,0 +1,56 @@
+<h1>
+Shape Functions - Linear Transition
+</h1>
+<h2>
+2016.03.14
+</h2>
+<h3>
+Using linear interpolation to transition between shape functions.
+</h3>
+
+<p>
+Linear interpolation function between a and b.
+<p>
+<figure class="code"><pre><code>The transition is made by changing the value of t within the range:
+{ 0 <= t <= 1 }
+
+result = (1 - t) * a + t * b
+where:
+t=0 => result = a
+t=1 => result = b
+</code></pre></figure>
+
+<p>
+This can be used to transition between two shape functions, a and b: 
+<p>
+<figure class="code"><pre><code>a = f_1(d_1, d_2, ..., d_n)
+
+b = f_2(d_1, d_2, ..., d_n)
+
+result = (1 - t) * f_1(d_1, d_2, ..., d_n) + t * f_2(d_1, d_2, ..., d_n)
+
+Where:
+{ 0 <= t <= 1 }
+
+d_1 = x
+d_2 = y
+d_n = highest_dimension
+</code></pre></figure>
+
+<p>
+Finally, this can be generalised to allow blends between N shape functions:
+<p>
+<figure class="code"><pre><code>T = t_1 + t_2  + t_3 + ... + t_N
+
+T = 1 at any transition position.
+
+Where N is the number of shape functions.
+
+result = t_1 * f_1 + t_2 * f_2 + t_3 * f_3 + ... + t_N * f_N
+(or)
+result = 
+t_1 * f_1(d_1, d_2, ..., d_n) + 
+t_2 * f_2(d_1, d_2, ..., d_n) + 
+t_3 * f_3(d_1, d_2, ..., d_n) + 
+... + t_N * f_N(d_1, d_2, ..., d_n)
+</code></pre></figure>
