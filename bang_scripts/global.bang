@@ -50,7 +50,7 @@ Footer
 !!footer html/footer.html
 #!footer
 !social_1 vimeo
-!social_1_link http://www.vimeo.com/joshdeakin
+!social_1_link http://www.vimeo.com/joshuadeakin
 !social_2 linkedin
 !social_2_link http://uk.linkedin.com/in/joshuadeakin
 !social_3 github
