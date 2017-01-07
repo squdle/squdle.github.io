@@ -31,12 +31,13 @@ Navigation - current_link changes link style
 !link_4_name blog
 !link_4 ./blog_1.html
 !link_4_class link
-!link_5_name about
-!link_5 ./about.html
+Uncomment, and increment contact, and modify nav.html to show CV
+#!link_5_name about
+#!link_5 ./about.html
+#!link_5_class link
+!link_5_name contact
+!link_5 ./contact.html
 !link_5_class link
-!link_6_name contact
-!link_6 ./contact.html
-!link_6_class link
 
 Main Default content
 !!main html/main.html
