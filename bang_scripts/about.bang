@@ -9,4 +9,4 @@
 !pdf !!resource!!cv.pdf
 !text <a href="!!pdf!!" class="link">PDF download</a>
 !extra <img src="!!resource!!cv.png" alt="Curriculum Vitae" width="500px" height="auto" id="cv">
-!!!! html/base.html about.html
+#!!!! html/base.html about.html

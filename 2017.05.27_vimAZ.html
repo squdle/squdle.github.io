@@ -28,63 +28,69 @@
     <div id="main">
 
 <article> <h1>
-Shape Functions - Linear Transition
+Vim A-Z
 </h1>
 <h2>
-2016.03.14
+2017.05.27
 </h2>
 <h3>
-Using linear interpolation to transition between shape functions.
+General overview of the vi(m) language.
 </h3>
 
 <p>
-Linear interpolation function between a and b.
+Have been learning a bit of vim to help format text quickly.
+Whether this replaces my editor at work is tbc but had become my defacto at home.
+Note that keys have multiple meanings depending on modifiers and mode, this is just a general overview.
+</p>
+
+<pre><code>
+A-Z
+
+a - append
+b - back
+c - change
+d - delete
+e - end
+f - find
+g - goto
+h - left
+i - insert
+j - down
+k - up
+l - right
+m - mark
+n - next
+o - open down
+p - paste
+q - record
+r - replace
+s - substitute
+t - to
+u - undo
+v - visual
+w - word
+x - delete
+y - yank
+z - fold
+
+Language structure:
+&ltcount&gt&ltverb&gt&ltnoun&gt      
+
+</code></pre>
+
 <p>
-<figure class="code"><pre><code>The transition is made by changing the value of t within the range:
-{ 0 <= t <= 1 }
-
-result = (1 - t) * a + t * b
-where:
-t=0 => result = a
-t=1 => result = b
-</code></pre></figure>
-
-<p>
-This can be used to transition between two shape functions, a and b: 
-<p>
-<figure class="code"><pre><code>a = f_1(d_1, d_2, ..., d_n)
-
-b = f_2(d_1, d_2, ..., d_n)
-
-result = (1 - t) * f_1(d_1, d_2, ..., d_n) + t * f_2(d_1, d_2, ..., d_n)
-
 Where:
-{ 0 <= t <= 1 }
-
-d_1 = x
-d_2 = y
-d_n = highest_dimension
-</code></pre></figure>
+Count is an optional number (implicitly one),
+Verb is an action to take, 
+Noun is a text object. 
+A noun with no verb often acts as an implicit motion.
+</p>
 
 <p>
-Finally, this can be generalised to allow blends between N shape functions:
-<p>
-<figure class="code"><pre><code>T = t_1 + t_2  + t_3 + ... + t_N
-
-T = 1 at any transition position.
-
-Where N is the number of shape functions.
-
-result = t_1 * f_1 + t_2 * f_2 + t_3 * f_3 + ... + t_N * f_N
-(or)
-result = 
-t_1 * f_1(d_1, d_2, ..., d_n) + 
-t_2 * f_2(d_1, d_2, ..., d_n) + 
-t_3 * f_3(d_1, d_2, ..., d_n) + 
-... + t_N * f_N(d_1, d_2, ..., d_n)
-</code></pre></figure> 
-<a class="blog-button" href="2016.03.12_ShapeFunctions.html">previous</a> 
-<a class="blog-button" href="2017.05.27_vimAZ.html">next</a> </article>
+This simple language becomes really powerful once new text objects  are defined!
+</p>
+ 
+<a class="blog-button" href="2016.03.14_ShapeFunctionTransition.html">previous</a>  </article>
     </div>
 <div>
     <footer>
@@ -96,5 +102,4 @@ t_3 * f_3(d_1, d_2, ..., d_n) +
     </footer>
   </body>   
  
-
 </html>
