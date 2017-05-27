@@ -6,13 +6,13 @@ FONTS
 
 GENERAL COLORS
 !background-color #FFFFFF
-!second-background-color #FCB376
+!second-background-color #DBDBDB
 !text-color #222222
 !text-invert #FFFFFF
 !border-color #888888
 !shadow #BBBBBB
-!link-color #FF4600
-!link-active-color #FF914F
+!link-color #666666
+!link-active-color #666666
 !selection-color !!text-invert!!
 !selection-background-color !!link-active-color!!
 
@@ -20,15 +20,15 @@ BACKGROUND
 !page-background-color !!background-color!!
 !background-image-url !!resource!!bg.png
 !background-image  background-image: url("!!background-image-url!!");
-!background-image-1-url !!resource!!bg-1.png
+!background-image-1-url !!resource!!bg-1_grey.png
 !background-image-1  background-image: url("!!background-image-1-url!!");
-!background-image-2-url !!resource!!bg-2.png
+!background-image-2-url !!resource!!bg-2_grey.png
 !background-image-2  background-image: url("!!background-image-2-url!!");
-!background-image-3-url !!resource!!bg-3.png
+!background-image-3-url !!resource!!bg-3_grey.png
 !background-image-3  background-image: url("!!background-image-3-url!!");
-!background-image-4-url !!resource!!bg-4.png
+!background-image-4-url !!resource!!bg-4_grey.png
 !background-image-4  background-image: url("!!background-image-4-url!!");
-!background-image-5-url !!resource!!bg-5.png
+!background-image-5-url !!resource!!bg-5_grey.png
 !background-image-5  background-image: url("!!background-image-5-url!!");
 !background-image-404-url  !!resource!!bg-404.png
 !background-image-404  background-image: url("!!background-image-404-url!!");
